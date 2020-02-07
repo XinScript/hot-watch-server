@@ -1,6 +1,7 @@
 const fs = require('fs')
+
 module.exports = {
-    watch(dirPath='.',listener){
+    watch(dirPath:string ='.',listener:Function):void{
         if(!fs.existsSync('src')){
             throw Error('src directory not exist')
         }else{
